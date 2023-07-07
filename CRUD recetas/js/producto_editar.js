@@ -31,7 +31,7 @@ function modificar() {
         linkreceta: l,
         comentarios: c,
     }
-    let url = "https://ig23033.pythonanywhere.com/recetas/"+id
+    let url = "http://ig23033.pythonanywhere.com/recetas/"+id
     var options = {
         body: JSON.stringify(producto),
         method: 'PUT',
