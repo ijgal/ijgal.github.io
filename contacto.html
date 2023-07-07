@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
+    <!-- Se usa como método de validación jquery validation, también podría usarse función con charCodeAt(), expresiones regulares - HTML5 ya tiene su validación propia -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="recursos/portada.jpg" ; alt="Logo de la fábrica de pastas">
+        <h1>Las Mejores Pastas del Condado</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="CRUD recetas/recetas.html">Recetas</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <form id="contacto" action="enviar.php" method="post">
+          <div>
+            <label for="nombre">Nombre</label><br />
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div>
+            <label for="apellido">Apellido</label><br />
+            <input type="text" id="apellido" name="apellido" required />
+          </div>
+          <div>
+            <label for="email">Correo electrónico</label><br />
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="motivo">Motivo</label><br />
+            <select id="motivo" name="motivo" required>
+              <option value="">Selecciona un motivo</option>
+              <option value="consulta">Consulta</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="problema">Problema técnico</option>
+              <option value="presupuesto">Presupuesto</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <button class= "button-contacto" type="submit">Enviar</button>
+          </div>
+        </form>
+      </main>
+    </div>
+    <footer>
+      <div class="social">
+  <ul class="social-icons">
+          <li>Siguenos en:</li>
+          <li><a href="#"><i class="fab fa-instagram" style="color: #51361f;"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook" style="color: #51361f;"></i></a></li>
+          <li><a href="mailto:contacto@pastascondado.com"><i class="fa-solid fa-envelope" style="color: #51361f;"></i></a></li>
+      </ul>
+</div>
+      <h4>Las Mejores Pastas del Condado - Todos los derechos reservados</h4>
+  </footer>
+  </body>
+</html>

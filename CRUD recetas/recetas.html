@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <div class="wrapper">
+    <header>
+        <img src="../recursos/portada.jpg" ; alt="Logo de la fábrica de pastas">
+        <h1>Las Mejores Pastas del Condado</h1>
+        <nav>
+              <ul>
+                <nav>
+                    <ul>
+                      <li><a href="../index.html">Inicio</a></li>
+                      <li><a href="../about.html">Sobre Nosotros</a></li>
+                      <li><a href="../productos.html">Productos</a></li>
+                      <li><a href="../contacto.html">Contacto</a></li>
+                      <li><a href="../CRUD recetas/recetas.html">Recetas</a></li>
+                    </ul>
+                    </nav>
+          </header>
+    <main>
+        <div id="app" class="container">
+            <br>
+            <h1>Las Recetas de la Comunidad</h1>
+            
+            <a class="btn btn-primary" href="producto_nuevo.html">Nueva</a>
+
+            <section v-if="error">Lo sentimos se produjo un error</section>
+            <section v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+
+                </section>
+                <section v-else>
+                    
+                    <div class="grid-container">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre Receta</th>
+                                    <th scope="col">Link Receta</th>
+                                    <th scope="col">Comentarios</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="producto in productos" class="">
+                                    <td scope="row">{{producto.id}}</td>
+                                    <td>{{producto.nombrereceta}}</td>
+                                    <td>{{producto.linkreceta}}</td>
+                                    <td>{{producto.comentarios}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)">Eliminar</button>
+                                        
+                                        <a class="btn btn-primary" :href="'producto_editar.html?id='+ producto.id+'&nombrereceta=' +producto.nombrereceta+ '&linkreceta='+producto.linkreceta+'&comentarios='+producto.comentarios" >Editar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="social">
+          <ul class="social-icons">
+            <li>Siguenos en:</li>
+            <li><a href="#"><i class="fab fa-instagram" style="color: #51361f;"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook" style="color: #51361f;"></i></a></li>
+            <li><a href="mailto:contacto@pastascondado.com"><i class="fa-solid fa-envelope" style="color: #51361f;"></i></a>
+            </li>
+          </ul>
+        </div>
+        <h4>Las Mejores Pastas del Condado - Todos los derechos reservados</h4>
+      </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="./js/main.js"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="./js/productos.js"></script>
+</body>
+
+</html>
