@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        url:"https://ig23033.pythonanywhere.com/recetas",
+        url:"http://ig23033.pythonanywhere.com/recetas",
         productos:[],
         error:false,
         cargando:true
@@ -28,7 +28,7 @@ const { createApp } = Vue
                 })
         },
         eliminar(producto) {
-            const url = 'https://ig23033.pythonanywhere.com/recetas/' + producto;
+            const url = 'http://ig23033.pythonanywhere.com/recetas/' + producto;
             var options = {
                 method: 'DELETE',
             }
