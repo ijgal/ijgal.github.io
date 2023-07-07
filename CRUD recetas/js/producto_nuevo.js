@@ -15,7 +15,7 @@ function guardar() {
         linkreceta: l,
         comentarios: c,
     }
-    let url = "https://ig23033.pythonanywhere.com/recetas"
+    let url = "http://ig23033.pythonanywhere.com/recetas"
     var options = {
         body: JSON.stringify(producto),
         method: 'POST',
