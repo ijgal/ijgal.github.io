@@ -112,6 +112,15 @@ button:hover {
   cursor: pointer!important;
 }
 
+.btn-success {
+  background-color: #a46e51!important;
+  color: #fff!important;
+  padding: 10px 20px!important;
+  border: none!important;
+  border-radius: 5px!important;
+  cursor: pointer!important;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
