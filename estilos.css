@@ -30,9 +30,9 @@ header img {
 }
 
 h1 {
-  font-family: "Dancing Script", cursive;
-  font-size: 3rem;
-  margin-top: 0;
+  font-family: "Dancing Script", cursive!important;
+  font-size: 3rem!important;
+  margin-top: 0!important;
 }
 
 h2 {
